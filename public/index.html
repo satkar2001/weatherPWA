@@ -19,12 +19,12 @@
     <div id="root"></div>
    <!-- our entire react code will be written here  -->
      <script>
-       if('serviceworker' in navigator)
+       if('serviceWorker' in navigator)
        {
          window.addEventListener('load',()=>{
            navigator.serviceWorker.register('./serviceworker.js')
-            .then((reg)=>console.log('success',reg.scope))
-            .catch((err)=>console.log('Failure'))
+            .then((reg)=>console.log('success :',reg.scope))
+            .catch((err)=>console.log('Failure',err))
 
          })
        }
